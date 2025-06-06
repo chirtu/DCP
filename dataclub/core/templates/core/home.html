@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Data Protection Club</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'core/style.css' %}">
-</head>
-<body>
-    <h1>Welcome to the Data Protection Club</h1>
-    <p>Empowering digital citizens through awareness and action.</p>
-</body>
-</html>
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+  {% include 'core/partials/hero.html' %}
+  {% include 'core/partials/members.html' %}
+  {% include 'core/partials/events.html' %}
+  {% include 'core/partials/resources.html' %}
+  {% include 'core/partials/resources.html' %}
+{% endblock %}
