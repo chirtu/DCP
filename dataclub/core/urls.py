@@ -9,5 +9,4 @@ urlpatterns = [
     # path('members/', views.members, name='members'),
     # path('contacts/', views.contact, name='contacts'),
     
-    
 ]
