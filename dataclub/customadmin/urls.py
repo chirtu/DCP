@@ -3,8 +3,7 @@ from django.urls import path
 
 urlpatterns = [
 
-    # path('',views.customadmin, name='home'),
-    path('', views.admin_home, name='register'),
-
-    
+    path('', views.admin_login, name='login'),
+    path('dashboard/', views.admin_home, name='home'),
+   
 ]
