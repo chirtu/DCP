@@ -1,0 +1,109 @@
+{% extends 'customadmin/master.html' %}
+
+{% block content %}
+<div class="pagetitle d-flex justify-content-between align-items-center">
+  <div>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+        <li class="breadcrumb-item active">Add About</li>
+      </ol>
+    </nav>
+  </div>
+</div><!-- End Page Title -->
+
+<hr>
+
+<section class="section">
+  <div class="row">
+    <div class="col-lg-12">
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Add About Details</h5>
+
+          <!-- Begin Form -->
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <!-- Upload Image -->
+            <div class="row mb-3">
+              <label for="formFile" class="col-sm-2 col-form-label">Upload Image</label>
+              <div class="col-sm-10">
+                <input class="form-control" type="file" id="formFile" name="image">
+              </div>
+            </div>
+
+            <!-- Name -->
+            <div class="row mb-3">
+              <label for="name" class="col-sm-2 col-form-label">Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" name="name">
+              </div>
+            </div>
+
+            <!-- Name Details -->
+            <div class="row mb-3">
+              <label for="name_details" class="col-sm-2 col-form-label">Name Details</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" id="name_details" name="name_details" rows="4"></textarea>
+              </div>
+            </div>
+
+            <!-- Title -->
+            <div class="row mb-3">
+              <label for="title" class="col-sm-2 col-form-label">Title</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="title" name="title">
+              </div>
+            </div>
+
+            <!-- Subtitle -->
+            <div class="row mb-3">
+              <label for="subtitle" class="col-sm-2 col-form-label">Subtitle</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="subtitle" name="subtitle">
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div class="row mb-3">
+              <label for="description" class="col-sm-2 col-form-label">Description</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" id="description" name="description" rows="4"></textarea>
+              </div>
+            </div>
+
+            <!-- Question -->
+            <div class="row mb-3">
+              <label for="question" class="col-sm-2 col-form-label">Question</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="question" name="question">
+              </div>
+            </div>
+
+            <!-- Question Description -->
+            <div class="row mb-3">
+              <label for="question_description" class="col-sm-2 col-form-label">Question Description</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" id="question_description" name="question_description" rows="4"></textarea>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="row mb-3">
+              <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary">Submit Form</button>
+              </div>
+            </div>
+
+          </form>
+          <!-- End Form -->
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock %}

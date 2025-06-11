@@ -17,7 +17,11 @@ def admin_events(request):
     return render(request, 'customadmin/pages/events.html')
 
 def admin_abouts(request):
-    return render(request, 'customadmin/pages/about.html')
+    return render(request, 'customadmin/pages/about/about.html')
+
+def admin_add_about(request):
+    return render(request, 'customadmin/pages/about/add_about.html')
+
 
 def admin_resources(request):
     return render(request, 'customadmin/pages/resources.html')
