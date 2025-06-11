@@ -78,16 +78,13 @@ WSGI_APPLICATION = 'dataclub.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myprojectdb',          # Jina la DB uliyounda kwenye phpMyAdmin
-        'USER': 'root',                 # Default XAMPP user ni 'root'
-        'PASSWORD': '',                 # Hakuna password kwa default
+        'NAME': 'dpc',          
+        'USER': 'root',                 
+        'PASSWORD': '',                
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
 }
-
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
