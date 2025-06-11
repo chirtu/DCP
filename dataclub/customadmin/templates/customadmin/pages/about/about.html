@@ -13,7 +13,7 @@
   </div>
 </div><!-- End Page Title -->
 
-<div class="card p-3" >
+<div class="card p-3">
   <div class="card-body">
 
     <!-- Nav Tabs -->
@@ -33,114 +33,118 @@
     <!-- Tab Contents -->
     <div class="tab-content pt-3" id="aboutTabContent">
 
-      <!-- View Tab -->     
-      <div class="row tab-pane fade show active" id="view" role="tabpanel" aria-labelledby="view-tab">
-        <div class="col-lg-12">
-              <!-- Table with stripped rows -->
-              <table class="table datatable">
-                <thead>
-                  <tr>
-                    <th>
-                     #
-                    </th>
-                    <th>
-                      <b>N</b>ame
-                    </th>
-                    <th>Ext.</th>
-                    <th>City</th>
-                    <th data-type="date" data-format="YYYY/DD/MM">Start Date</th>
-                    <th>Completion</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                     <td>1</td>
-                    <td>Unity Pugh</td>
-                    <td>9958</td>
-                    <td>Curicó</td>
-                    <td>2005/02/11</td>
-                    <td>37%</td>
-                  </tr>
-                 </tbody>
-              </table>
-              <!-- End Table with stripped rows -->
+      <!-- View Tab -->
+      <div class="tab-pane fade show active" id="view" role="tabpanel" aria-labelledby="view-tab">
+        <div class="table-responsive">
+          <table class="table datatable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th><b>Name</b></th>
+                <th>Ext.</th>
+                <th>City</th>
+                <th data-type="date" data-format="YYYY/DD/MM">Start Date</th>
+                <th>Completion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Unity Pugh</td>
+                <td>9958</td>
+                <td>Curicó</td>
+                <td>2005/02/11</td>
+                <td>37%</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
-      <!-- Add Form Tab -->
+      <!-- Add Tab -->
       <div class="tab-pane fade" id="add" role="tabpanel" aria-labelledby="add-tab">
-
         <h5 class="card-title">Add About Details</h5>
 
         <form method="post" enctype="multipart/form-data">
           {% csrf_token %}
 
+          <!-- Upload Image -->
           <div class="row mb-3">
             <label for="formFile" class="col-sm-2 col-form-label">Upload Image</label>
             <div class="col-sm-10">
-              <input class="form-control" type="file" id="formFile" name="image">
+              <input class="form-control" type="file" id="formFile" name="image" required>
             </div>
           </div>
 
+          <!-- Name -->
           <div class="row mb-3">
             <label for="name" class="col-sm-2 col-form-label">Name</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="name" name="name">
+              <input type="text" class="form-control" id="name" name="name" required>
             </div>
           </div>
 
+          <!-- Name Details -->
           <div class="row mb-3">
             <label for="name_details" class="col-sm-2 col-form-label">Name Details</label>
             <div class="col-sm-10">
-              <textarea class="form-control" id="name_details" name="name_details" rows="3"></textarea>
+              <textarea class="form-control" id="name_details" name="name_details" rows="3" required></textarea>
             </div>
           </div>
 
+          <!-- Title -->
           <div class="row mb-3">
             <label for="title" class="col-sm-2 col-form-label">Title</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="title" name="title">
+              <input type="text" class="form-control" id="title" name="title" required>
             </div>
           </div>
 
+          <!-- Subtitle -->
           <div class="row mb-3">
             <label for="subtitle" class="col-sm-2 col-form-label">Subtitle</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="subtitle" name="subtitle">
+              <input type="text" class="form-control" id="subtitle" name="subtitle" required>
             </div>
           </div>
 
+          <!-- Description -->
           <div class="row mb-3">
             <label for="description" class="col-sm-2 col-form-label">Description</label>
             <div class="col-sm-10">
-              <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+              <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
             </div>
           </div>
 
+          <!-- Question -->
           <div class="row mb-3">
             <label for="question" class="col-sm-2 col-form-label">Question</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="question" name="question">
+              <input type="text" class="form-control" id="question" name="question" required>
             </div>
           </div>
 
+          <!-- Question Description -->
           <div class="row mb-3">
             <label for="question_description" class="col-sm-2 col-form-label">Question Description</label>
             <div class="col-sm-10">
-              <textarea class="form-control" id="question_description" name="question_description" rows="3"></textarea>
+              <textarea class="form-control" id="question_description" name="question_description" rows="3" required></textarea>
             </div>
           </div>
 
+          <!-- Submit Button -->
           <div class="row mb-3">
             <div class="col-sm-10 offset-sm-2">
               <button type="submit" class="btn btn-primary">Submit Form</button>
             </div>
           </div>
-
         </form>
-
       </div>
+      <!-- End Add Tab -->
+
     </div>
+    <!-- End Tab Content -->
+
   </div>
 </div>
 {% endblock %}
