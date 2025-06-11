@@ -33,27 +33,9 @@
     <!-- Tab Contents -->
     <div class="tab-content pt-3" id="aboutTabContent">
 
-      <!-- View Tab -->
-      <div class="tab-pane fade show active" id="view" role="tabpanel" aria-labelledby="view-tab">
-        <!-- Optional: Display about data dynamically -->
-        {# Example: Looping through about items from context #}
-        {% for about in about_list %}
-          <div class="mb-3">
-            <h6>{{ about.name }}</h6>
-            <p>{{ about.description }}</p>
-          </div>
-        {% empty %}
-          <p>No about entries found.</p>
-        {% endfor %}
-      </div>
-          <section class="section">
-      <div class="row">
+      <!-- View Tab -->     
+      <div class="row tab-pane fade show active" id="view" role="tabpanel" aria-labelledby="view-tab">
         <div class="col-lg-12">
-
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">About detials</h5>
-
               <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
@@ -82,13 +64,8 @@
                  </tbody>
               </table>
               <!-- End Table with stripped rows -->
-
-            </div>
-          </div>
-
         </div>
       </div>
-    </section>
 
       <!-- Add Form Tab -->
       <div class="tab-pane fade" id="add" role="tabpanel" aria-labelledby="add-tab">
